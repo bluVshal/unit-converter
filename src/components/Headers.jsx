@@ -13,15 +13,23 @@ const Headers = () => {
   ];
 
   return (
-    <div>
-      <TabView>
-        {typesArr.map((typ) => {
-          return (<TabPanel key={typ} header={typ}>
-            <Conversion type={typ}/>
-          </TabPanel>);
-        })}
-      </TabView>
-    </div>
+    <>
+      <div>
+        <TabView>
+          {typesArr.map((typ) => {
+            return (
+              <TabPanel
+                key={typ}
+                header={typ}
+                headerClassName="flex align-items-center"
+              >
+                <Conversion type={typ} />
+              </TabPanel>
+            );
+          })}
+        </TabView>
+      </div>
+    </>
   );
 };
 

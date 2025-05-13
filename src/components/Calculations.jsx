@@ -28,7 +28,7 @@ import {
   toiseToMeters,
   piedToMeters,
   pouceToCentimeters,
-  ligneToMillimeters
+  ligneToMillimeters,
 } from "../lib/conversions";
 
 const Calculations = (props) => {
@@ -67,7 +67,6 @@ const Calculations = (props) => {
   };
 
   const calcConversion = () => {
-    console.log(selectedType);
     switch (selectedType) {
       case "Celsius to Fahrenheit":
         setConversionResult(celsiusToFahrenheit(convertInput));
@@ -133,48 +132,50 @@ const Calculations = (props) => {
   };
 
   return (
-    <div>
-      <Dropdown
-        value={selectedType}
-        onChange={(e) => {
-          setSelectedType(e.value);
-          setConversionResult(0);
-        }}
-        options={convertArr}
-        optionLabel="name"
-        placeholder="Conversion method"
-        className="w-full md:w-14rem"
-      />
-      {!selectedType ? (
-        <></>
-      ) : (
-        <div>
-          <label htmlFor="convertInput" className="font-bold block mb-2">
-            {selectedType}
-          </label>
-          <InputNumber
-            id="convertInput"
-            value={convertInput}
-            onValueChange={(e) => setConvertInput(e.value)}
-            minFractionDigits={2}
-          />
+    <>
+      <div>
+        <Dropdown
+          value={selectedType}
+          onChange={(e) => {
+            setSelectedType(e.value);
+            setConversionResult(0);
+          }}
+          options={convertArr}
+          optionLabel="name"
+          placeholder="Conversion method"
+          className="w-full md:w-14rem"
+        />
+        {!selectedType ? (
+          <></>
+        ) : (
           <div>
-            <label htmlFor="result" className="font-bold block mb-2">
-              Result
+            <label htmlFor="convertInput" className="font-bold block mb-2">
+              {selectedType}
             </label>
             <InputNumber
-              id="result"
-              value={conversionResult}
+              id="convertInput"
+              value={convertInput}
+              onValueChange={(e) => setConvertInput(e.value)}
               minFractionDigits={2}
-              readOnly
             />
+            <div>
+              <label htmlFor="result" className="font-bold block mb-2">
+                Result
+              </label>
+              <InputNumber
+                id="result"
+                value={conversionResult}
+                minFractionDigits={2}
+                readOnly
+              />
+            </div>
+            <div>
+              <Button onClick={calcConversion}>Convert</Button>
+            </div>
           </div>
-          <div>
-            <Button onClick={calcConversion}>Convert</Button>
-          </div>
-        </div>
-      )}
-    </div>
+        )}
+      </div>
+    </>
   );
 };
 
