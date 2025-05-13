@@ -17,7 +17,18 @@ import {
   milesToKilometers,
   ouncesToGrams,
   poundsToKilograms,
-  stonesToKilograms
+  stonesToKilograms,
+  fluidOuncesToMilliliters,
+  pintsToLiters,
+  gallonsToLiters,
+  squareFeetToSquareMeters,
+  squareYardsToSquareMeters,
+  acresToHectares,
+  arpentToSquareMeters,
+  toiseToMeters,
+  piedToMeters,
+  pouceToCentimeters,
+  ligneToMillimeters
 } from "../lib/conversions";
 
 const Calculations = (props) => {
@@ -84,6 +95,39 @@ const Calculations = (props) => {
         break;
       case "Stones to Kilograms":
         setConversionResult(stonesToKilograms(convertInput));
+        break;
+      case "Fluid Ounces to Milliliters":
+        setConversionResult(fluidOuncesToMilliliters(convertInput));
+        break;
+      case "Pints to Liters":
+        setConversionResult(pintsToLiters(convertInput));
+        break;
+      case "Gallons to Liters":
+        setConversionResult(gallonsToLiters(convertInput));
+        break;
+      case "Square Feet to Square Meters":
+        setConversionResult(squareFeetToSquareMeters(convertInput));
+        break;
+      case "Square Yards to Square Meters":
+        setConversionResult(squareYardsToSquareMeters(convertInput));
+        break;
+      case "Acres to Hectares":
+        setConversionResult(acresToHectares(convertInput));
+        break;
+      case "Arpent to Square Meters":
+        setConversionResult(arpentToSquareMeters(convertInput));
+        break;
+      case "Toise to Meters":
+        setConversionResult(toiseToMeters(convertInput));
+        break;
+      case "Pied to Meters":
+        setConversionResult(piedToMeters(convertInput));
+        break;
+      case "Pouce to Centimeters":
+        setConversionResult(pouceToCentimeters(convertInput));
+        break;
+      case "Ligne to Millimeters":
+        setConversionResult(ligneToMillimeters(convertInput));
         break;
     }
   };

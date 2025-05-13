@@ -91,7 +91,7 @@ export const conversionOptions = {
 export const lengthArr = ['Inches to Centimeters','Feet to Meters', 'Yards to Meters', 'Miles to Kilometers'];
 export const tempArr = ['Celsius to Fahrenheit','Fahrenheit to Celsius'];
 export const weightArr = ['Ounces to Grams','Pounds to Kilograms','Stones to Kilograms'];
-export const volumeArr = ['AA','BB'];
-export const areaArr = ['AA','BB'];
-export const landArr = ['AA','BB'];
+export const volumeArr = ['Fluid Ounces to Milliliters','Pints to Liters', 'Gallons to Liters'];
+export const areaArr = ['Square Feet to Square Meters','Square Yards to Square Meters', 'Acres to Hectares'];
+export const landArr = ['Arpent to Square Meters','Toise to Meters', 'Pied to Meters', 'Pouce to Centimeters', 'Ligne to Millimeters'];
 
