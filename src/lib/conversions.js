@@ -88,10 +88,10 @@ export const conversionOptions = {
   ],
 };
 
-export const lengthArr = ['AA','BB'];
-export const tempArr = ['AA','BB'];
-export const weightArr = ['AA','BB'];
-export const areaArr = ['AA','BB'];
+export const lengthArr = ['Inches to Centimeters','Feet to Meters', 'Yards to Meters', 'Miles to Kilometers'];
+export const tempArr = ['Celsius to Fahrenheit','Fahrenheit to Celsius'];
+export const weightArr = ['Ounces to Grams','Pounds to Kilograms','Stones to Kilograms'];
 export const volumeArr = ['AA','BB'];
+export const areaArr = ['AA','BB'];
 export const landArr = ['AA','BB'];
 
